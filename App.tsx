@@ -1,11 +1,14 @@
 import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
 import RootStack from './screens/RootStacks';
+import {LogContextProvider} from './context/LogConext';
 
 function App(): React.JSX.Element {
   return (
     <NavigationContainer>
-      <RootStack />
+      <LogContextProvider>
+        <RootStack />
+      </LogContextProvider>
     </NavigationContainer>
   );
 }
